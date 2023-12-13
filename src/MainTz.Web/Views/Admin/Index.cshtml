@@ -1,0 +1,73 @@
+﻿@using MainTz.Web.ViewModels.UserViewModels
+@model IEnumerable<UserResponse>
+
+<div class="row bg-light fn-view-size">
+	<h2 class="text-center" style="font-size:38px">Управление пользователями</h2>
+    <div class="col-9">
+		<div class="row">
+			<div class="col-1 fw-bold">Id</div>
+			<div class="col-3 fw-bold">Имя</div>
+			<div class="col-3 fw-bold">Пароль</div>
+			<div class="col-3 fw-bold">Роль</div>
+			<div class="col-2 fw-bold">Действие</div>
+			@foreach (var user in Model)
+			{
+				<div class="col-1">@user.Id</div>
+				<div class="col-3">@user.Name</div>
+				<div class="col-3">@user.Password</div>
+				<div class="col-2">
+					<form method="post" asp-controller="Admin" asp-action="DeleteUser">
+						<input type="hidden" name="userDto.Id" value="@user.Id"/>
+						<input type="hidden" name="userDto.Name" value="@user.Name" />
+						<input type="hidden" name="userDto.Password" value="@user.Password" />
+
+						<button class="btn btn-danger" type="submit">Удалить</button>
+					</form>
+				</div>
+			}
+		</div>
+    </div>
+
+    <div class="col-3">
+		<div class="row user-commands-form py-2">
+			<form method="post" asp-area="" asp-controller="Admin" asp-action="CreateUser">
+				<div class="d-flex align-items-center">
+					<label class="mx-1">Имя:</label>
+					<input class="w-100 my-1" type="text" name="userDto.Name" /><br />
+				</div>
+				<div class="d-flex align-items-center">
+					<label class="mx-1">Пароль: </label>
+					<input class="w-100 my-1" type="text" name="userDto.Password" /><br />
+				</div>
+				<div class="d-flex align-items-center">
+					<label class="mx-1">Роль: </label>
+					<input class="w-100 my-1" type="text" name="userDto.Role" /><br />
+				</div>
+
+				<input class="btn btn-success w-100" type="submit" value="Добавить пользователя" />
+			</form>
+		</div>
+		<div class="row">
+			<form method="post" asp-area="" asp-controller="Admin" asp-action="UpdateUser">
+				<div class="d-flex align-items-center">
+					<label class="mx-1">Id:</label>
+					<input class="w-100 my-1" type="text" name="userDto.Id" /><br />
+				</div>
+				<div class="d-flex align-items-center">
+					<label class="mx-1">Имя:</label>
+					<input class="w-100 my-1" type="text" name="userDto.Name" /><br />
+				</div>
+				<div class="d-flex align-items-center">
+					<label class="mx-1">Пароль: </label>
+					<input class="w-100 my-1" type="text" name="userDto.Password" /><br />
+				</div>
+				<div class="d-flex align-items-center">
+					<label class="mx-1">Роль: </label>
+					<input class="w-100 my-1" type="text" name="userDto.Role" /><br />
+				</div>
+
+				<input class="btn btn-warning w-100" type="submit" value="Редактировать машину" />
+			</form>
+		</div>
+    </div>
+</div>
