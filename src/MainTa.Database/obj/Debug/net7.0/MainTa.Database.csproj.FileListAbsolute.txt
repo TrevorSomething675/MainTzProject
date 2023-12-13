@@ -1,5 +1,0 @@
-C:\Users\Win10Pro\Desktop\MainTz.RestApi\jija\MainTa.Database\obj\Debug\net7.0\MainTa.Database.csproj.AssemblyReference.cache
-C:\Users\Win10Pro\Desktop\MainTz.RestApi\jija\MainTa.Database\obj\Debug\net7.0\MainTa.Database.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Win10Pro\Desktop\MainTz.RestApi\jija\MainTa.Database\obj\Debug\net7.0\MainTa.Database.AssemblyInfoInputs.cache
-C:\Users\Win10Pro\Desktop\MainTz.RestApi\jija\MainTa.Database\obj\Debug\net7.0\MainTa.Database.AssemblyInfo.cs
-C:\Users\Win10Pro\Desktop\MainTz.RestApi\jija\MainTa.Database\obj\Debug\net7.0\MainTa.Database.csproj.CoreCompileInputs.cache
